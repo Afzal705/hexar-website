@@ -1,0 +1,204 @@
+/* Reset & Font */
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  background: #ffffff;
+  color: #333;
+  overflow-x: hidden;
+}
+
+/* Header */
+header.navbar {
+  display: flex;
+  align-items: center;
+  background: #004aad;
+  color: #fff;
+  padding: 15px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+}
+
+header.navbar .logo {
+  width: 60px;
+  height: auto;
+  margin-right: 15px;
+  border-radius: 8px;
+}
+
+header.navbar h1 {
+  font-size: 22px;
+  letter-spacing: 1px;
+  animation: fadeDown 1.2s ease;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, #004aad, #007bff);
+  color: white;
+  text-align: center;
+  padding: 120px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at center, rgba(255,255,255,0.2), transparent 70%);
+  animation: rotateGlow 12s linear infinite;
+}
+
+@keyframes rotateGlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.hero h2 {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+.btn {
+  background: #fff;
+  color: #004aad;
+  padding: 12px 25px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: #002b66;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* Tentang Kami */
+.about {
+  padding: 80px 20px;
+  text-align: center;
+  background: #f7f9fc;
+}
+
+.about h2 {
+  color: #004aad;
+  margin-bottom: 20px;
+}
+
+.about p {
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Layanan */
+.services {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.services h2 {
+  color: #004aad;
+  margin-bottom: 40px;
+}
+
+.service-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.service-card {
+  background: #eaf2ff;
+  border-radius: 10px;
+  width: 300px;
+  padding: 25px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.hover-float:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.service-card h3 {
+  color: #004aad;
+  margin-bottom: 10px;
+}
+
+/* Kontak */
+.contact {
+  background: #004aad;
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.contact a.btn {
+  background: white;
+  color: #004aad;
+}
+
+.contact a.btn:hover {
+  background: #002b66;
+  color: white;
+}
+
+/* Footer */
+footer {
+  background: #002b66;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+}
+
+/* ===== Animations ===== */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 1.2s ease-out forwards;
+}
+
+.fade-down {
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeDown 1.2s ease forwards;
+}
+
+.slide-up {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 1.2s ease forwards;
+}
+
+.delay1 { animation-delay: 0.3s; }
+.delay2 { animation-delay: 0.6s; }
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeDown {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
